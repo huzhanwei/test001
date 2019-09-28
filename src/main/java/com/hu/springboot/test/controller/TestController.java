@@ -38,7 +38,7 @@ public class TestController {
    }
 
     /**
-     * 通过ID查询数据
+     * 通过bookId查询数据
      * unless：true表示不保存到缓存，与condition相反
      * @param bookId
      * @return
