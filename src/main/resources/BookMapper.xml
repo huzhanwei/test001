@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+        <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+                "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.hu.springboot.test.dao.IBookMapper">
+
+    <insert id="insert" parameterType="com.hu.springboot.test.dao.Book">
+        INSERT INTO BookMast(bookId, bookName, bookAuthor, bookPice) VALUE(#{bookId},#{bookName},#{bookAuthor},#{bookPice});
+    </insert>
+
+<select id="find" parameterType="int" resultType="com.hu.springboot.test.dao.Book">
+    SELECT * FROM bookmast  where bookId =#{bookId};
+</select>
+
+    <delete id="delete">
+        DELETE FROM bookmast where bookId = #{bookId};
+    </delete>
+</mapper>
